@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PG1-tV-XTh">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--People View Controller-->
+        <scene sceneID="WE5-FF-sJg">
+            <objects>
+                <tableViewController title="People View Controller" id="d1G-aG-yPH" customClass="ViewController" customModule="SWAPI" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uJn-SQ-GEj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PersonCell" rowHeight="87" id="lQh-pw-7yQ" customClass="PersonCell" customModule="SWAPI" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="87"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lQh-pw-7yQ" id="4aO-KX-cr4">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="86.666666666666671"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="DvK-F1-mQn">
+                                            <rect key="frame" x="20" y="11" width="120.66666666666669" height="56.666666666666657"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyf-A0-kGD">
+                                                    <rect key="frame" x="0.0" y="0.0" width="72.333333333333329" height="28.666666666666668"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="30"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="dg8-gx-pad">
+                                                    <rect key="frame" x="0.0" y="36.666666666666664" width="120.66666666666667" height="20"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLV-es-FeU">
+                                                            <rect key="frame" x="0.0" y="0.0" width="61.666666666666664" height="20"/>
+                                                            <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mass" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgb-o9-uJx">
+                                                            <rect key="frame" x="79.666666666666671" y="0.0" width="41" height="20"/>
+                                                            <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="DvK-F1-mQn" secondAttribute="bottom" constant="8.3333333333333428" id="A3I-rF-v7y"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="DvK-F1-mQn" secondAttribute="leading" id="FGV-V1-e9F"/>
+                                        <constraint firstItem="DvK-F1-mQn" firstAttribute="top" secondItem="4aO-KX-cr4" secondAttribute="topMargin" constant="-3.5527136788005009e-15" id="cw8-0e-Ago"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="genderLabel" destination="eLV-es-FeU" id="h5p-Ed-ih7"/>
+                                    <outlet property="massLabel" destination="xgb-o9-uJx" id="coT-Fb-wC7"/>
+                                    <outlet property="nameLabel" destination="fyf-A0-kGD" id="Nwm-16-fr3"/>
+                                    <segue destination="Njh-qY-isc" kind="show" identifier="ShowPerson" id="sCa-6M-ScE"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="d1G-aG-yPH" id="gkv-RT-zhm"/>
+                            <outlet property="delegate" destination="d1G-aG-yPH" id="vC4-CH-QWl"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="People" id="rsQ-18-8st"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6XV-Qj-WCm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="864" y="899"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jYW-mA-y5y">
+            <objects>
+                <navigationController id="PG1-tV-XTh" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BCx-ma-v9i">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="d1G-aG-yPH" kind="relationship" relationship="rootViewController" id="AVm-cr-pYe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iqn-Ii-lye" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-129" y="899"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="29N-2Y-rYN">
+            <objects>
+                <viewController id="Njh-qY-isc" customClass="DetailViewController" customModule="SWAPI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M6s-Ja-kdO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NtE-oh-yUc">
+                                <rect key="frame" x="20" y="108.00000000000001" width="374" height="52.666666666666671"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="MaU-fb-i2u">
+                                <rect key="frame" x="20" y="230.00000000000003" width="374" height="437.66666666666674"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="qzm-Is-dGH">
+                                        <rect key="frame" x="0.0" y="0.0" width="268.66666666666669" height="25.666666666666668"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LN0-Mt-EXy">
+                                                <rect key="frame" x="0.0" y="0.0" width="146" height="25.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEL-Aa-qfT">
+                                                <rect key="frame" x="189" y="0.0" width="79.666666666666686" height="25.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="Q8M-vO-O3A">
+                                        <rect key="frame" x="0.0" y="68.666666666666686" width="242" height="25.666666666666671"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mass:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ws-FT-YDi">
+                                                <rect key="frame" x="0.0" y="0.0" width="147" height="25.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mass" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9V-KO-g8G">
+                                                <rect key="frame" x="189" y="0.0" width="53" height="25.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="vUc-8J-qAv">
+                                        <rect key="frame" x="0.0" y="137.33333333333331" width="321.66666666666669" height="25.666666666666657"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hair Color:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uda-dk-eqV">
+                                                <rect key="frame" x="0.0" y="0.0" width="146" height="25.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hair color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujh-wE-364">
+                                                <rect key="frame" x="189" y="0.0" width="132.66666666666663" height="25.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="Unr-Pv-tVb">
+                                        <rect key="frame" x="0.0" y="206" width="321.66666666666669" height="25.666666666666657"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skin Color:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHc-hB-mNn">
+                                                <rect key="frame" x="0.0" y="0.0" width="146" height="25.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="skin color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aw8-Wj-MeP">
+                                                <rect key="frame" x="189" y="0.0" width="132.66666666666663" height="25.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="A7L-mO-V2G">
+                                        <rect key="frame" x="0.0" y="274.66666666666669" width="308.33333333333331" height="25.666666666666686"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eye Color:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8a-Dj-uKx">
+                                                <rect key="frame" x="0.0" y="0.0" width="146" height="25.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="eye color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9I-J4-YYK">
+                                                <rect key="frame" x="189" y="0.0" width="119.33333333333331" height="25.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="P4g-z8-FD0">
+                                        <rect key="frame" x="0.0" y="343.33333333333337" width="321.66666666666669" height="25.666666666666686"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birth Year:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMk-Ym-1gl">
+                                                <rect key="frame" x="0.0" y="0.0" width="147" height="25.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="birth year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6N-d4-0CO">
+                                                <rect key="frame" x="189" y="0.0" width="132.66666666666663" height="25.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="QR4-yE-xrR">
+                                        <rect key="frame" x="0.0" y="412" width="268.66666666666669" height="25.666666666666686"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7V-42-fkx">
+                                                <rect key="frame" x="0.0" y="0.0" width="146" height="25.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O8K-Dj-dIe">
+                                                <rect key="frame" x="189" y="0.0" width="79.666666666666686" height="25.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="O8K-Dj-dIe" firstAttribute="leading" secondItem="JEL-Aa-qfT" secondAttribute="leading" id="0Ui-Sd-vg3"/>
+                                    <constraint firstItem="Z9I-J4-YYK" firstAttribute="leading" secondItem="JEL-Aa-qfT" secondAttribute="leading" id="U0M-hf-4WZ"/>
+                                    <constraint firstItem="ujh-wE-364" firstAttribute="leading" secondItem="JEL-Aa-qfT" secondAttribute="leading" id="VsN-MF-aC6"/>
+                                    <constraint firstItem="s9V-KO-g8G" firstAttribute="leading" secondItem="JEL-Aa-qfT" secondAttribute="leading" id="WvG-RQ-Pr0"/>
+                                    <constraint firstItem="c6N-d4-0CO" firstAttribute="leading" secondItem="JEL-Aa-qfT" secondAttribute="leading" id="xLC-uN-7lV"/>
+                                    <constraint firstItem="Aw8-Wj-MeP" firstAttribute="leading" secondItem="JEL-Aa-qfT" secondAttribute="leading" id="yCf-kK-Ukb"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MaU-fb-i2u" firstAttribute="top" secondItem="NtE-oh-yUc" secondAttribute="bottom" constant="69.329999999999998" id="DNd-LT-ts8"/>
+                            <constraint firstItem="NtE-oh-yUc" firstAttribute="leading" secondItem="M6s-Ja-kdO" secondAttribute="leadingMargin" id="G25-Jn-GC2"/>
+                            <constraint firstItem="MaU-fb-i2u" firstAttribute="leading" secondItem="W3b-Ec-DX7" secondAttribute="leading" constant="20" id="d4J-QG-aSc"/>
+                            <constraint firstItem="NtE-oh-yUc" firstAttribute="top" secondItem="W3b-Ec-DX7" secondAttribute="top" constant="20" id="egX-aM-k5q"/>
+                            <constraint firstItem="W3b-Ec-DX7" firstAttribute="trailing" secondItem="MaU-fb-i2u" secondAttribute="trailing" constant="20" id="kZz-Ki-ApG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NtE-oh-yUc" secondAttribute="trailing" id="lLk-0c-Rlv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="W3b-Ec-DX7"/>
+                    </view>
+                    <connections>
+                        <outlet property="birthYearLabel" destination="c6N-d4-0CO" id="EHk-TK-gnU"/>
+                        <outlet property="eyeColorLabel" destination="Z9I-J4-YYK" id="FRg-v8-iFW"/>
+                        <outlet property="genderLabel" destination="O8K-Dj-dIe" id="hiy-Fh-7E6"/>
+                        <outlet property="hairColorLabel" destination="ujh-wE-364" id="MKp-t3-Y6b"/>
+                        <outlet property="heightLabel" destination="JEL-Aa-qfT" id="igo-YO-EaO"/>
+                        <outlet property="massLabel" destination="s9V-KO-g8G" id="uZu-Jk-Rnn"/>
+                        <outlet property="nameLabel" destination="NtE-oh-yUc" id="9x5-0U-5Uk"/>
+                        <outlet property="skinColorLabel" destination="Aw8-Wj-MeP" id="82h-5w-G76"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nVu-1t-7nx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1803" y="899"/>
+        </scene>
+    </scenes>
+</document>

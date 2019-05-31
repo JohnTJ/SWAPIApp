@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF03336722A048A60088C2AB /* QueryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03336622A048A60088C2AB /* QueryResult.swift */; };
+		AFF871D2229ED38400FF8E51 /* PersonDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF871D1229ED38400FF8E51 /* PersonDataSource.swift */; };
+		AFF871D4229ED7D300FF8E51 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF871D3229ED7D300FF8E51 /* PersonCell.swift */; };
+		AFF871D8229EE69A00FF8E51 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF871D7229EE69A00FF8E51 /* DetailViewController.swift */; };
 		AFFA15AF2296DD1600F6D035 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA15AE2296DD1600F6D035 /* AppDelegate.swift */; };
 		AFFA15B12296DD1600F6D035 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA15B02296DD1600F6D035 /* ViewController.swift */; };
 		AFFA15B42296DD1600F6D035 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFFA15B22296DD1600F6D035 /* Main.storyboard */; };
@@ -37,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF03336622A048A60088C2AB /* QueryResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryResult.swift; sourceTree = "<group>"; };
+		AFF871D1229ED38400FF8E51 /* PersonDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDataSource.swift; sourceTree = "<group>"; };
+		AFF871D3229ED7D300FF8E51 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
+		AFF871D7229EE69A00FF8E51 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		AFFA15AB2296DD1600F6D035 /* SWAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFFA15AE2296DD1600F6D035 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFFA15B02296DD1600F6D035 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +88,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF03336322A048400088C2AB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AFFA15E02296E40000F6D035 /* Person.swift */,
+				AF03336622A048A60088C2AB /* QueryResult.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AF03336422A048500088C2AB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				AFFA15E42296F38400F6D035 /* APIStore.swift */,
+				AFFA15DC2296DD4700F6D035 /* SwapiAPI.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		AF03336522A0487A0088C2AB /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				AFFA15B02296DD1600F6D035 /* ViewController.swift */,
+				AFFA15B22296DD1600F6D035 /* Main.storyboard */,
+				AFF871D7229EE69A00FF8E51 /* DetailViewController.swift */,
+				AFF871D3229ED7D300FF8E51 /* PersonCell.swift */,
+				AFF871D1229ED38400FF8E51 /* PersonDataSource.swift */,
+				AFFA15B52296DD1800F6D035 /* Assets.xcassets */,
+				AFFA15B72296DD1800F6D035 /* LaunchScreen.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		AFFA15A22296DD1600F6D035 = {
 			isa = PBXGroup;
 			children = (
@@ -103,14 +143,10 @@
 		AFFA15AD2296DD1600F6D035 /* SWAPI */ = {
 			isa = PBXGroup;
 			children = (
+				AF03336522A0487A0088C2AB /* UI */,
+				AF03336422A048500088C2AB /* Network */,
+				AF03336322A048400088C2AB /* Models */,
 				AFFA15AE2296DD1600F6D035 /* AppDelegate.swift */,
-				AFFA15B02296DD1600F6D035 /* ViewController.swift */,
-				AFFA15B22296DD1600F6D035 /* Main.storyboard */,
-				AFFA15DC2296DD4700F6D035 /* SwapiAPI.swift */,
-				AFFA15E02296E40000F6D035 /* Person.swift */,
-				AFFA15E42296F38400F6D035 /* APIStore.swift */,
-				AFFA15B52296DD1800F6D035 /* Assets.xcassets */,
-				AFFA15B72296DD1800F6D035 /* LaunchScreen.storyboard */,
 				AFFA15BA2296DD1800F6D035 /* Info.plist */,
 			);
 			path = SWAPI;
@@ -265,11 +301,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF03336722A048A60088C2AB /* QueryResult.swift in Sources */,
 				AFFA15E52296F38400F6D035 /* APIStore.swift in Sources */,
+				AFF871D2229ED38400FF8E51 /* PersonDataSource.swift in Sources */,
 				AFFA15E12296E40000F6D035 /* Person.swift in Sources */,
 				AFFA15B12296DD1600F6D035 /* ViewController.swift in Sources */,
 				AFFA15DD2296DD4700F6D035 /* SwapiAPI.swift in Sources */,
 				AFFA15AF2296DD1600F6D035 /* AppDelegate.swift in Sources */,
+				AFF871D4229ED7D300FF8E51 /* PersonCell.swift in Sources */,
+				AFF871D8229EE69A00FF8E51 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

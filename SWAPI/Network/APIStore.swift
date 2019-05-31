@@ -14,7 +14,7 @@ enum PersonError: Error {
 }
 
 enum PeopleResult {
-    case success([Person])
+    case success(QueryResult<Person>)
     case failure(Error)
 }
 
@@ -25,18 +25,17 @@ class APIStore {
         return URLSession(configuration: config)
     }()
     
-    func fetchPeople(completion: @escaping (PeopleResult) -> Void) {
-        let url = SwapiAPI.peopleURL
+    func fetchPeople(pageNumber: String, completion: @escaping (PeopleResult) -> Void) {
+        
+        let url = SwapiAPI.swapiURL(endPoint: .people, pageNumber: pageNumber)
         let request = URLRequest(url: url)
-        let task = session.dataTask(with: request) {
-            (data, response, error) -> Void in
-            
+        let task = session.dataTask(with: request) { (data, response, error) -> Void in
+
             let result = self.processPeopleRequest(data: data, error: error)
             OperationQueue.main.addOperation {
                 completion(result)
             }
         }
-        
         task.resume()
     }
     
@@ -46,5 +45,4 @@ class APIStore {
         }
         return SwapiAPI.people(fromJSON: jsonData)
     }
-    
 }
